@@ -1,0 +1,9 @@
+{
+  "name": "Yoloer",
+  "displayName": "Yoloer",
+  "androidStatusBarColor": "#486CCA",
+  "androidStatusBar": {
+    "barStyle": "light-content",
+    "backgroundColor": "#486CCA"
+  },
+}
