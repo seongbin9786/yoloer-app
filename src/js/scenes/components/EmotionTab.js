@@ -5,6 +5,8 @@ import InlineView from "../../utils/InlineView";
 import DailyEmotion from "../../icons/DailyEmotion";
 
 function EmotionTab({ emotions }) {
+  if (emotions === undefined) return null;
+
   return (
     <InlineView customStyles={styles.container}>
       {emotions.map((type, index) => {

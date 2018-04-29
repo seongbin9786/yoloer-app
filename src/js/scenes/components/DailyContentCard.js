@@ -12,7 +12,7 @@ function DailyContentCard(props) {
   console.log("Received Props:", date, title, emotions, content);
 
   // 일단 색상을 첫 감정의 색깔로 결정한다.
-  const color = EmotionConfig.getColorByName(emotions[0]);
+  const color = EmotionConfig.getColorFromArray(emotions);
 
   return (
     <ColoredBackgroundCard color={color}>
