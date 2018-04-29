@@ -9,6 +9,7 @@ const SceneDefaultLayout = props => (
     <CenterView>
       <PaddingView padding={5} />
       {props.children}
+      <PaddingView padding={5} />
     </CenterView>
   </ScrollView>
 );
