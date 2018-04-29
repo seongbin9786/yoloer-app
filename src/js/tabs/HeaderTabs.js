@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { StyleSheet, Dimensions } from "react-native";
 import { TabViewAnimated, TabBar, SceneMap } from "react-native-tab-view";
 
+import DailyScene from "../scenes/DailyScene";
+import ExperienceScene from "../scenes/ExperienceScene";
+import RemindScene from "../scenes/RemindScene";
+
 export default class HeaderTabs extends Component {
   state = {
     index: 0,
@@ -24,13 +28,11 @@ export default class HeaderTabs extends Component {
     );
   }
 
-  renderSceneMap = () => {
-    return SceneMap({
-      daily: DailyScene,
-      experience: ExperienceScene,
-      remind: RemindScene
-    });
-  };
+  renderSceneMap = SceneMap({
+    daily: DailyScene,
+    experience: ExperienceScene,
+    remind: RemindScene
+  });
 
   renderHeader = props => {
     return (
