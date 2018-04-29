@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import SceneConfig from './scenes/SceneConfig';
-import HeaderTabs from './tabs/HeaderTabs';
+import HeaderTabs from "./tabs/HeaderTabs";
 
-export default App = () => <HeaderTabs />;
+const App = () => <HeaderTabs />;
+
+export default App;
