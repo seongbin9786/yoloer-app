@@ -7,9 +7,9 @@ import DailyEmotion from "../../icons/DailyEmotion";
 function EmotionTab({ emotions }) {
   return (
     <InlineView>
-      {emotions.map(type => {
+      {emotions.map((type, index) => {
         console.log("emotion:", type);
-        return <DailyEmotion type={type} />;
+        return <DailyEmotion type={type} key={index} />;
       })}
     </InlineView>
   );
