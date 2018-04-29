@@ -2,21 +2,20 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import CardView from "react-native-cardview";
 
-const DefaultLevelCard = props => (
+const DailyEmotionCard = ({ children, color }) => (
   <CardView
     cardElevation={2}
     cardMaxElevation={2}
     cornerRadius={5}
-    style={styles.card}
+    style={[styles.card, { backgroundColor: color }]}
   >
-    {props.children}
+    {children}
   </CardView>
 );
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "white",
-    color: "black",
+    color: "white",
 
     paddingVertical: 15,
     paddingHorizontal: 15,
@@ -26,4 +25,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DefaultLevelCard;
+export default DailyEmotionCard;

@@ -6,13 +6,22 @@ import DailyEmotion from "../../icons/DailyEmotion";
 
 function EmotionTab({ emotions }) {
   return (
-    <InlineView>
+    <InlineView customStyles={styles.container}>
       {emotions.map((type, index) => {
-        console.log("emotion:", type);
         return <DailyEmotion type={type} key={index} />;
       })}
     </InlineView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    marginVertical: 3,
+
+    // flex things
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
 
 export default EmotionTab;

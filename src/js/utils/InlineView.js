@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, ScrollView, View, Text } from "react-native";
 
-const InlineView = ({ children }) => (
-  <View style={[styles.row, styles.inline]}>{children}</View>
+const InlineView = ({ children, customStyles }) => (
+  <View style={[styles.row, styles.inline, customStyles]}>{children}</View>
 );
 
 const styles = StyleSheet.create({
