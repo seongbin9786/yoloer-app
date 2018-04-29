@@ -1,16 +1,10 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import FaIcon from "react-native-vector-icons/FontAwesome";
-import MatIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const iconMap = {
-  LOVE: { name: "heart", color: "deeppink", from: FaIcon },
-  LIKE: { name: "thumbs-up", color: "#228be6", from: FaIcon },
-  HAPPY: { name: "emoticon-happy", color: "#82c91e", from: MatIcon }
-};
+import EmotionConfig from "../config/EmotionConfig";
 
 const DailyEmotion = ({ type }) => {
-  const { name, color, from } = iconMap[type];
+  const { name, color, from } = EmotionConfig.getIconByName(type);
   const IconType = from; // 대문자 아니면 Error
 
   return (
@@ -22,7 +16,11 @@ const DailyEmotion = ({ type }) => {
 
 const styles = StyleSheet.create({
   dailyEmotion: {
-    margin: 5
+    margin: 3,
+    marginTop: 0,
+    backgroundColor: "white",
+    padding: 4,
+    borderRadius: 50
   }
 });
 
