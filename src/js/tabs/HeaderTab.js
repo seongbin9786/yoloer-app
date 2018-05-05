@@ -1,14 +1,34 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { Image, View, StyleSheet } from 'react-native';
 import { TabBar } from 'react-native-tab-view';
-import { Header } from 'react-native-elements';
+import { Header, Avatar } from 'react-native-elements';
 
 const HeaderTab = props => (
   <View>
     <Header
-      leftComponent={{ icon: 'menu', color: '#fff' }}
-      centerComponent={{ text: 'YOLOER', style: { color: '#fff' } }}
-      rightComponent={{ icon: 'home', color: '#fff' }}
+      leftComponent={
+        <Avatar
+          rounded
+          source={{ uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg' }}
+          onPress={() => console.log('Works!')}
+          activeOpacity={0.7}
+          height={30}
+          width={30}
+          containerStyle={{ marginLeft: -3, marginBottom: -3 }}
+        />
+      }
+      centerComponent={
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Image source={logoImage} style={{ width: 38, resizeMode: 'contain' }} />
+        </View>
+      }
+      rightComponent={{ icon: 'search', color: '#fff' }}
       outerContainerStyles={styles.outerContainerStyles}
     />
     <TabBar
@@ -21,6 +41,10 @@ const HeaderTab = props => (
 );
 
 export default HeaderTab;
+
+const logoImage = require('./../../img/logo_3.png');
+
+console.log('logoImage:', logoImage);
 
 const styles = StyleSheet.create({
   tabbar: {
