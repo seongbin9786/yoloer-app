@@ -9,8 +9,8 @@ import ColoredBackgroundCard from '../../cards/ColoredBackgroundCard';
 // 일상 카드
 function DailyContentCard(props) {
   const {
- date, title, emotions, content 
-} = props;
+    date, title, emotions, content,
+  } = props;
   console.log('Received Props:', date, title, emotions, content);
 
   // 일단 색상을 첫 감정의 색깔로 결정한다.

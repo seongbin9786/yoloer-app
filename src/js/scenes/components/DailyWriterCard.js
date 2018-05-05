@@ -1,22 +1,36 @@
-import React from 'react';
-import { StyleSheet, ScrollView, View, Text } from 'react-native';
+import React, { Component } from 'react';
+import { Text } from 'react-native';
+import moment from 'moment/src/moment';
 
-import InlineView from '../../utils/InlineView';
-
-import DailyEmotion from '../../icons/DailyEmotion';
 import DefaultLevelCard from '../../cards/DefaultLevelCard';
+import WriteDiaryButton from '../../buttons/WriteDiaryButton';
 
 // TODO: 작성 컴포넌트
-function DailyWriterCard() {
-  return (
-    <DefaultLevelCard>
-      <Text>Hello! This is a writing space</Text>
-    </DefaultLevelCard>
-  );
-}
+class DailyWriterCard extends Component {
+  constructor(props) {
+    super(props);
 
-const styles = StyleSheet.create({
-  // ...
-});
+    this.state = {
+      now: '현재시간: ',
+    };
+
+    setInterval(() => {
+      this.setState({ now: `현재시간: ${moment().format('YY.MM.DD')} ${moment().format('LTS')}` });
+    }, 1000);
+  }
+
+  render() {
+    const { now } = this.state;
+
+    return (
+      <DefaultLevelCard>
+        <Text style={{ fontSize: 20 }}>{now}</Text>
+        <Text>오늘은 어떤 일들이 있었나요?</Text>
+        <Text>하루가 가기전에 언능 기록해보세요 ^.^*</Text>
+        <WriteDiaryButton />
+      </DefaultLevelCard>
+    );
+  }
+}
 
 export default DailyWriterCard;
