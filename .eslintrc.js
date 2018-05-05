@@ -10,10 +10,12 @@ module.exports = {
         },
         "sourceType": "module"
     },
+    "parser": "babel-eslint",
     "plugins": [
         "react"
     ],
     "rules": {
+        "strict": 0,
         "jsx-a11y/label-has-for": 0,
         "jsx-a11y/anchor-is-valid": 0,
         "jsx-a11y/no-noninteractive-element-interactions": 0,

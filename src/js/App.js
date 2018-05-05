@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import HeaderTabs from "./tabs/HeaderTabs";
+import TabContainer from './tabs/TabContainer';
 
-const App = () => <HeaderTabs />;
+const App = () => (
+  <TabContainer />
+);
 
 export default App;
