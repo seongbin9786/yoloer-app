@@ -1,7 +1,7 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 
-import EmotionConfig from "../config/EmotionConfig";
+import EmotionConfig from '../config/EmotionConfig';
 
 const DailyEmotion = ({ type }) => {
   const { name, color, from } = EmotionConfig.getIconByName(type);
@@ -18,10 +18,10 @@ const styles = StyleSheet.create({
   dailyEmotion: {
     margin: 3,
     marginTop: 0,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     padding: 4,
-    borderRadius: 50
-  }
+    borderRadius: 50,
+  },
 });
 
 export default DailyEmotion;

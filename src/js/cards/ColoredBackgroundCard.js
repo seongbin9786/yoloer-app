@@ -1,6 +1,6 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import CardView from "react-native-cardview";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import CardView from 'react-native-cardview';
 
 const DailyEmotionCard = ({ children, color }) => (
   <CardView
@@ -15,14 +15,14 @@ const DailyEmotionCard = ({ children, color }) => (
 
 const styles = StyleSheet.create({
   card: {
-    color: "white",
+    color: 'white',
 
     paddingVertical: 15,
     paddingHorizontal: 15,
 
     marginVertical: 2,
-    marginHorizontal: 10
-  }
+    marginHorizontal: 10,
+  },
 });
 
 export default DailyEmotionCard;

@@ -1,6 +1,6 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import CardView from "react-native-cardview";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import CardView from 'react-native-cardview';
 
 const DefaultLevelCard = props => (
   <CardView
@@ -15,15 +15,15 @@ const DefaultLevelCard = props => (
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "white",
-    color: "black",
+    backgroundColor: 'white',
+    color: 'black',
 
     paddingVertical: 15,
     paddingHorizontal: 15,
 
     marginVertical: 2,
-    marginHorizontal: 10
-  }
+    marginHorizontal: 10,
+  },
 });
 
 export default DefaultLevelCard;

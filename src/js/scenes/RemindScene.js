@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 function RemindScene() {
   return (
@@ -10,7 +10,7 @@ function RemindScene() {
 }
 
 const styles = StyleSheet.create({
-  //...
+  // ...
 });
 
 export default RemindScene;

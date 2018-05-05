@@ -1,15 +1,17 @@
-import React from "react";
-import { StyleSheet, ScrollView, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, ScrollView, View, Text } from 'react-native';
 
-import EmotionConfig from "../../config/EmotionConfig";
-import InlineView from "../../utils/InlineView";
-import EmotionTab from "./EmotionTab";
-import ColoredBackgroundCard from "../../cards/ColoredBackgroundCard";
+import EmotionConfig from '../../config/EmotionConfig';
+import InlineView from '../../utils/InlineView';
+import EmotionTab from './EmotionTab';
+import ColoredBackgroundCard from '../../cards/ColoredBackgroundCard';
 
 // 일상 카드
 function DailyContentCard(props) {
-  const { date, title, emotions, content } = props;
-  console.log("Received Props:", date, title, emotions, content);
+  const {
+ date, title, emotions, content 
+} = props;
+  console.log('Received Props:', date, title, emotions, content);
 
   // 일단 색상을 첫 감정의 색깔로 결정한다.
   const color = EmotionConfig.getColorFromArray(emotions);
@@ -39,17 +41,17 @@ const ContentArea = ({ children }) => (
 const styles = StyleSheet.create({
   date: {
     fontSize: 12,
-    color: "white"
+    color: 'white',
   },
   title: {
-    textAlign: "left",
+    textAlign: 'left',
     fontSize: 25,
-    color: "white"
+    color: 'white',
   },
   content: {
     marginBottom: 10,
-    color: "white"
-  }
+    color: 'white',
+  },
 });
 
 export default DailyContentCard;

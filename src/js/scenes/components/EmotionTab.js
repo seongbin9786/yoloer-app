@@ -1,17 +1,15 @@
-import React from "react";
-import { StyleSheet, ScrollView, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, ScrollView, View, Text } from 'react-native';
 
-import InlineView from "../../utils/InlineView";
-import DailyEmotion from "../../icons/DailyEmotion";
+import InlineView from '../../utils/InlineView';
+import DailyEmotion from '../../icons/DailyEmotion';
 
 function EmotionTab({ emotions }) {
   if (emotions === undefined) return null;
 
   return (
     <InlineView customStyles={styles.container}>
-      {emotions.map((type, index) => {
-        return <DailyEmotion type={type} key={index} />;
-      })}
+      {emotions.map((type, index) => <DailyEmotion type={type} key={index} />)}
     </InlineView>
   );
 }
@@ -21,9 +19,9 @@ const styles = StyleSheet.create({
     marginVertical: 3,
 
     // flex things
-    alignItems: "center",
-    justifyContent: "center"
-  }
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default EmotionTab;

@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, ScrollView, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, ScrollView, View, Text } from 'react-native';
 
 const InlineView = ({ children, customStyles }) => (
   <View style={[styles.row, styles.inline, customStyles]}>{children}</View>
@@ -7,11 +7,11 @@ const InlineView = ({ children, customStyles }) => (
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: "row"
+    flexDirection: 'row',
   },
   inline: {
-    justifyContent: "space-between"
-  }
+    justifyContent: 'space-between',
+  },
 });
 
 export default InlineView;

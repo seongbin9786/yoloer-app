@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 function ExperienceScene() {
   return (
@@ -10,7 +10,7 @@ function ExperienceScene() {
 }
 
 const styles = StyleSheet.create({
-  //...
+  // ...
 });
 
 export default ExperienceScene;
