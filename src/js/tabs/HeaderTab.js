@@ -44,8 +44,6 @@ export default HeaderTab;
 
 const logoImage = require('./../../img/logo_3.png');
 
-console.log('logoImage:', logoImage);
-
 const styles = StyleSheet.create({
   tabbar: {
     backgroundColor: '#FFF',

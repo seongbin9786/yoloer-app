@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements';
 
-const WriteDiaryButton = () => (
+const WriteDiaryButton = ({ toggleBtn }) => (
   <Button
     containerViewStyle={styles.container}
     buttonStyle={styles.button}
@@ -12,6 +12,7 @@ const WriteDiaryButton = () => (
     }}
     large
     title="오늘 하루 기록하기"
+    onPress={toggleBtn}
   />
 );
 
@@ -26,6 +27,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderRadius: 5,
     marginTop: 10,
+    marginBottom: 5,
   },
 });
 
